@@ -183,15 +183,17 @@ npm run dev  # http://localhost:3000
 🔗 Frontend: https://cogneeva-ldlx-ac411x30x-aaditya-salgaonkars-projects.vercel.app/ <br>
 🔗 Backend: https://cogneeva.onrender.com/
 
-###👨‍💻 Author
-##Aaditya Salgaonkar
-##Full Stack Engineer | Goa, India 🇮🇳
-##📧 aadityasalgaonkar@gmail.com
+---
 
-##📄 License
+### 👨‍💻 Author
+## Aaditya Salgaonkar
+## Full Stack Engineer | Goa, India 🇮🇳
+## 📧 aadityasalgaonkar@gmail.com
+
+## 📄 License
 MIT License — for hackathon and educational purposes.
 
-##🙏 Acknowledgements
+## 🙏 Acknowledgements
 Hack The Vibe organizers & Tech Horizons Club
 Supabase, OpenRouter, Google Gemini API, Netlify, GitHub
 Judges & mentors who reviewed and guided
