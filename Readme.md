@@ -157,15 +157,13 @@ Backend will run on localhost:5000
 Video link will be submitted with final submission.
 
 Live Deployment
-Frontend on Vercel : https://cogneeva-ldlx-ac411x30x-aaditya-salgaonkars-projects.vercel.app/
+Frontend on Vercel : https://cogneeva-ldlx-ac411x30x-aaditya-salgaonkars-projects.vercel.app/ <br>
 Backend on Render : https://cogneeva.onrender.com/
 
 👨‍💻 Author
 Aaditya Salgaonkar
 Full Stack Engineer | Goa, India 🇮🇳
 📧 aadityasalgaonkar@gmail.com
-🔗 LinkedIn
-💻 GitHub
 
 📄 License
 MIT License — for hackathon and educational purposes.
