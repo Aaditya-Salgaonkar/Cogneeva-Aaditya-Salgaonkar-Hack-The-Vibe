@@ -26,7 +26,7 @@ export default function AILabPage() {
     <div className="min-h-screen bg-gradient-to-tr from-[#F8FAFC] to-[#E2E8F0] p-10">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-5xl py-3 mb-5 font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-[#2563EB] via-[#8B5CF6] to-[#60A5FA]">
-          Code Finetuning Studio
+          Code Finetuning Studio (Coming Soon...)
         </h1>
         {/* Standalone controls */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

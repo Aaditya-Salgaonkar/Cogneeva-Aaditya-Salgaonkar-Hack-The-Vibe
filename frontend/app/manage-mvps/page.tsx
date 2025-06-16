@@ -108,8 +108,8 @@ const MVPCard: React.FC<MVPCardProps> = ({ mvp }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition p-6 border border-gray-200">
       <h2 className="text-2xl font-semibold text-indigo-600 mb-2">
-        {mvp.name}
-      </h2>
+  {mvp.name.length > 30 ? `${mvp.name.slice(0, 30)}...` : mvp.name}
+</h2>
       <p className="text-sm text-gray-400 mb-4">
         {new Date(mvp.created_at).toLocaleString()}
       </p>

@@ -24,6 +24,7 @@ export default function CustomizeMVP() {
   const [mvp, setMvp] = useState<MVP | null>(null);
   const [loading, setLoading] = useState(true);
   const [selectedFile, setSelectedFile] = useState<FileContent | null>(null);
+  const [downloading, setDownloading] = useState(false);
 
   useEffect(() => {
     const fetchMVP = async () => {
@@ -50,6 +51,31 @@ export default function CustomizeMVP() {
 
     fetchMVP();
   }, [id]);
+
+  const handleDownload = async () => {
+    if (!id) return;
+
+    try {
+      setDownloading(true);
+      const response = await fetch(`http://localhost:5000/api/mvp/download/${mvp?.name}`);
+      if (!response.ok) {
+        throw new Error("Failed to download ZIP");
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `${mvp?.name || "project"}.zip`;
+      link.click();
+      window.URL.revokeObjectURL(url);
+      setDownloading(false);
+    } catch (error) {
+      console.error("Download error:", error);
+      toast.error("Failed to download ZIP");
+      setDownloading(false);
+    }
+  };
 
   if (loading) return <Loading />;
 
@@ -78,7 +104,16 @@ export default function CustomizeMVP() {
 
       {/* Right: Code Viewer */}
       <div className="w-3/4 p-5 overflow-y-auto">
-        <h2 className="text-xl font-bold mb-3">{selectedFile?.path}</h2>
+        <div className="flex justify-between items-center mb-5">
+          <h2 className="text-xl font-bold">{selectedFile?.path}</h2>
+          <button
+            onClick={handleDownload}
+            className="px-4 py-2 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-700 transition"
+            disabled={downloading}
+          >
+            {downloading ? "Preparing ZIP..." : "Download ZIP"}
+          </button>
+        </div>
         <pre className="bg-gray-900 text-green-300 p-5 rounded-lg overflow-x-auto whitespace-pre-wrap">
           {selectedFile?.content}
         </pre>

@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { supabase } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
 import Loading from "@/components/Loading";
+import ReactMarkdown from 'react-markdown';
 
 interface Message {
   sender: 'user' | 'ai';
@@ -187,7 +188,8 @@ export default function GaluxiumChat() {
             )}
             {messages.map((msg, index) => (
               <div key={index} className={`my-3 p-4 rounded-xl max-w-[80%] ${msg.sender === 'user' ? 'ml-auto bg-gradient-to-r from-blue-100 to-purple-100 text-gray-900' : 'mr-auto bg-gray-100 text-gray-700'}`}>
-                <strong>{msg.sender === 'user' ? "You" : "Galuxium AI"}:</strong> {msg.message}
+                <strong>{msg.sender === 'user' ? "You" : "Galuxium AI"}:</strong> <ReactMarkdown >
+                  {msg.message}</ReactMarkdown>
               </div>
             ))}
             {loading && (
