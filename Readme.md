@@ -196,4 +196,5 @@ MIT License — for hackathon and educational purposes.
 ## 🙏 Acknowledgements
 Hack The Vibe organizers & Tech Horizons Club
 Supabase, OpenRouter, Google Gemini API, Netlify, GitHub
-Judges & mentors who reviewed and guided
+Judges & workshop organisers
+Thanks a lot!
