@@ -1,8 +1,8 @@
 ## 🚀 SaaS MVP Builder – AI-Powered Startup Generator
 
-*Submission for: Hack The Vibe 2025 (SaaS Domain)*  
+*Submission for: Hack The LLM*  
 *Built by: Aaditya Salgaonkar*  
-*Duration: 48 hours solo build*
+*Duration: 72 hours solo build*
 
 ---
 
@@ -194,7 +194,7 @@ npm run dev  # http://localhost:3000
 MIT License — for hackathon and educational purposes.
 
 ## 🙏 Acknowledgements
-Hack The Vibe organizers & Tech Horizons Club
+Hack The LLM organizers & Tech Horizons Club
 Supabase, OpenRouter, Google Gemini API, Netlify, GitHub
 Judges & workshop organisers
 Thanks a lot!
