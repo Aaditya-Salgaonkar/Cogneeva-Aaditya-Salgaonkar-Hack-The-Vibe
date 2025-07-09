@@ -8,7 +8,7 @@ const { PORT } = require("./config");
 const app = express();
 
 app.use(cors({
-  origin: "https://agenta-aaditya-salgaonkar-maximally.vercel.app", 
+  origin: "http://localhost:3000", 
   credentials: true
 }));
 app.use(express.json());
